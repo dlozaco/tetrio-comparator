@@ -4,44 +4,41 @@ import { Button, TextInput } from 'react-native-web'
 import { getUser, getUserSummaries } from '../api/tetrioEndpoints'
 
 export default function App({ navigation }) {
-
   return (
     <View style={styles.container}>
         <Text style={styles.title}>Tetrio Comparator</Text>
-        <View style={styles.buttonGroup}>
+        <TextInput
+          style={styles.textInput}
+          placeholder='user name'
+          placeholderTextColor={'#808080'}
+        />
+        <Button
+          title='USER INFO'
+          style={[styles.button, { marginTop: 60 }]}
+          onPress={() => {
+            console.log('Button pressed');
+          }}
+        />
+        <View style={styles.spacer}/>
+        <View style={styles.userComparator}>
           <TextInput
-            style={styles.textInput}
-            placeholder='user name'
+          style={styles.textInput}
+            placeholder='user1 name'
             placeholderTextColor={'#808080'}
           />
-          <Button
-            title='USER INFO'
-            style={styles.button}
-            onPress={() => {
-              console.log('Button pressed');
-            }}
-          />
-          <View style={styles.spacer}/>
-          <View style={styles.userComparator}>
-            <TextInput
-              style={styles.textInput}
-              placeholder='user1 name'
-              placeholderTextColor={'#808080'}
-            />
-            <TextInput
-              style={styles.textInput}
-              placeholder='user2 name'
-              placeholderTextColor={'#808080'}
-            />
-          </View>
-          <Button
-            title='COMPARE USERS'
-            style={styles.button}
-            onPress={() => {
-              console.log('Button pressed');
-            }}
+          <TextInput
+            style={styles.textInput}
+            placeholder='user2 name'
+            placeholderTextColor={'#808080'}
           />
         </View>
+        <Button
+          title='COMPARE USERS'
+          style={styles.button}
+          onPress={() => {
+            console.log('Button pressed');
+          }}
+        />
       <StatusBar style="dark" />
     </View>
   );
@@ -50,7 +47,7 @@ export default function App({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0c0a10',
+    backgroundColor: '#151314',
     alignItems: 'center',
     paddingTop: 80
   },
@@ -72,7 +69,11 @@ const styles = StyleSheet.create({
   },
   textInput: {
     backgroundColor: 'white',
-    marginTop: 10
+    marginTop: 10,
+    height: 25,
+    width: 300,
+    textAlign: 'center',
+    borderRadius: 40,
   },
   button: {
     marginTop: 10
