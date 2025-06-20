@@ -23,6 +23,9 @@
     },
     "web": {
       "favicon": "./assets/tetrio_ico.png"
-    }
+    },
+    "plugins": [
+      "expo-font"
+    ]
   }
 }
