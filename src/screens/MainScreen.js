@@ -3,7 +3,6 @@ import { ImageBackground, StyleSheet, Text, View } from 'react-native'
 import { useFonts } from 'expo-font'
 import { Tiny5_400Regular } from '@expo-google-fonts/tiny5'
 import { Button, TextInput } from 'react-native-web'
-import { getUser, getUserSummaries } from '../api/tetrioEndpoints'
 import image from '../../assets/tetrioBackground.jpg'
 import { useState } from 'react'
 
