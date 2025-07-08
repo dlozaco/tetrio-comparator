@@ -4,12 +4,16 @@ const get = async function (url) {
         method: 'GET',
         mode: 'no-cors',
         headers: {
-            'Content-Type': 'application/json'
+            'Accept': 'application/json'
         }
-    })
-    const responseData = response.json()
-    const userData = responseData.data
-    return userData
+    });
+
+    if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const responseData = await response.json();
+    return responseData.data; // Assumes responseData has a 'data' field
 }
 
 export { get }
