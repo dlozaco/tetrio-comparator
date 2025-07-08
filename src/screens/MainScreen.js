@@ -9,13 +9,12 @@ import { useState } from 'react'
 
 export default function MainScreen({ navigation }) {
   const [user, setUser] = useState('')
+  const [firstUser, setFirstUser] = useState('')
+  const [secondUser, setSecondUser] = useState('')
   const onValueChange = (text) => setUser(text); 
   const [fontsLoaded] = useFonts({
     Tiny5_400Regular
   })
-  const username = ''
-  const usernameComparator1 = ''
-  const usernameComparator2 = ''
 
   const goToUser = (user) => {
     navigation.navigate('User', {name: user})
