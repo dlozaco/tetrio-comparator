@@ -14,7 +14,7 @@ export default function App({ navigation }) {
               options={{
                 title:'Main Screen'
               }}/>
-            <Stack.Screen name='User' component={UserScreen}/>
+            <Stack.Screen name='User Info' component={UserScreen}/>
         </Stack.Navigator>
     </NavigationContainer>
   )
